@@ -10,7 +10,7 @@ serverSocket.listen()
 
 while True:
 #Establish the connection
-    print('Ready to serve...')
+    print('Ready to serve... at 8080')
     connectionSocket, addr = serverSocket.accept()
     try:
         message = connectionSocket.recv(1024)
