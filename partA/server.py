@@ -36,3 +36,4 @@ while True:
         connectionSocket.close()
     
 serverSocket.close()
+sys.exit()
