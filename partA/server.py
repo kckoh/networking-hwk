@@ -34,6 +34,9 @@ while True:
         connectionSocket.send(b"<html><head></head><body><h1>404 Not Found</h1></body></html>\r\n")
         # Close the client socket
         connectionSocket.close()
+    except Exception as e:
+        print(e)
 
-serverSocket.close()
-sys.exit()#Terminate the program after sending the corresponding data
+
+#serverSocket.close()
+#sys.exit()#Terminate the program after sending the corresponding data
