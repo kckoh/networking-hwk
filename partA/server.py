@@ -4,7 +4,7 @@ import sys # In order to terminate the program
 MAX_SIZE_BYTES = 65535
 serverSocket = socket(AF_INET, SOCK_STREAM)
 port = 8080
-hostname = 'localhost'
+hostname = ''
 serverSocket.bind((hostname, port))
 serverSocket.listen()
 
@@ -20,7 +20,8 @@ while True:
         outputdata = f.readlines()
         print(outputdata)
 #Send one HTTP header line into socket
-        connectionSocket.send(b"HTTP/1.1 200 OK\r\n\r\n")
+        connectionSocket.send(b"HTTP/1.1 200 OK\r\n")
+        connectionSocket.send(b"Access-Control-Allow-Origin: *\r\n")
 #Fill in end
 #Send the content of the requested file to the client
         for i in range(0, len(outputdata)):
