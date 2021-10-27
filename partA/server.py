@@ -4,7 +4,7 @@ import sys # In order to terminate the program
 MAX_SIZE_BYTES = 65535
 serverSocket = socket(AF_INET, SOCK_STREAM)
 port = 8080
-hostname = 'localhost'
+hostname = ''
 serverSocket.bind((hostname, port))
 serverSocket.listen()
 
